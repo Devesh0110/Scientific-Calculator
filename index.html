@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Pangolin&family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+      <style>
+          body{
+              background-image: url(img44.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              opacity: 0.9;
+          }
+          button
+         {
+         background-color:rgb(216, 38, 38);
+         color: white;
+         border: solid black 2px;
+         padding: 20px;
+         width:140px;
+         font-size: 40px;
+         text-align: center;
+         opacity: 0.9;
+         }
+  
+        input
+         {
+         background-color:rgb(255, 255, 255);
+         border:2px solid black;
+         padding: 20px;
+         width: 400px;
+         height: 20px;
+         text-align: right;
+         font-size: 30px;
+         }
+         table{
+             background-color: rgb(0, 0, 0);
+             opacity: 0.96;
+
+         }
+         button:hover{
+             opacity: 1;
+             cursor: pointer;
+         }
+      </style>
+      <title>SCIENTIFIC CALCULATOR</title>
+   </head>
+   <body><br><br>
+       <h1 style="font-family: 'Times New Roman', serif;margin-top: 10px;"><center><u>SCIENTIFIC CALCULATOR</u></center></h1><br>
+       <center><h2>(After performing any scientific operation, kindly close brackets before evaluating)</h2></center>
+       <center><div>
+      <!-- <table border="1"> -->
+          
+        <form name = "calc">
+              
+        <table id = "calc" border="1">
+              
+        <tr>
+            <td colspan="4"<center><input type="text" value="" style="margin-left: 17.5px;margin-right: 17.5px;padding-left: 120px;padding-right: 100px;" id="display"/></center></td>
+            <td colspan="2" ><center><button value="" style="padding-left:100px;padding-right:180px;font-family: 'Kanit', sans-serif;background-color: rgb(20, 165, 64);" onClick="clr()"/><center><b>CLR</b></center></button></center></td>
+        </tr>
+          
+        <tr>
+            <td><center><button id="btn" type="button" value="1"
+                    onclick="display.value+='1'">1</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="2"
+                    onclick="display.value+='2'">2</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="3"
+                    onclick="display.value+='3'">3</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="/"
+                onclick="display.value+='/'">/</button></center>
+        </td>
+            <td><center><button id="btn" type="button" value="log" style="background-color: rgb(124, 192, 181);color:black;"
+                onclick="display.value='Math.log('">log</button></center>
+        </td>
+            <td><center><button id="btn" type="button" value="=" style="background-color: rgb(124, 192, 181);color:black;"
+                    onclick="calculate(this.form)">=</button></center>
+            </td>
+        </tr>
+          
+        <tr>
+            <td><center><button id="btn" type="button" value="4"
+                    onclick="display.value+='4'">4</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="5"
+                    onclick="display.value+='5'">5</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="6"
+                    onclick="display.value+='6'">6</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="-" 
+                    onclick="display.value='-'">-</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="^" style="background-color: rgb(124, 192, 181);color:black;"
+                onclick="display.value+='Math.sqrt('">sqrt</button></center>
+        </td>
+              
+            <td><center><button id="btn" type="button" value="cos" style="background-color: rgb(124, 192, 181);color:black;"
+                    onclick="display.value='Math.cos('">cos</button></center>
+            </td>
+        </tr>
+          
+        <tr>
+            <td><center><button id="btn" type="button" value="7"
+                    onclick="display.value+='7'">7</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="8"
+                    onclick="display.value+='8'">8</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="9"
+                    onclick="display.value+='9'">9</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="*"
+                    onclick="display.value+='*'">X</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="n!" style="background-color: rgb(124, 192, 181);color:black;"
+                    onclick="display.value+='!'">!</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="sin" style="background-color: rgb(124, 192, 181);color:black;"
+                    onclick="display.value='Math.sin('">sin</button></center>
+            </td>
+        </tr>
+          
+        <tr>
+            <td><center><button id="btn" type="button" value="."
+                    onclick="display.value+='.'">.</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="0"
+                    onclick="display.value+='0'">0</button></center>
+            </td>
+              
+
+              
+            <td><center><button id="btn" type="button" value="+"
+                    onclick="display.value+='+'">+</button></center>
+            </td>
+              
+            <td><center><button id="btn" type="button" value="(" 
+                onclick="display.value+='('">(</button></center>
+        </td>
+          
+        <td><center><button id="btn" type="button" value=")" style="background-color: rgb(124, 192, 181);color:black;"
+                onclick="display.value+=')'">)</button></center>
+        </td>
+              
+            <td><center><button id="btn" type="button" value="tan" style="background-color: rgb(124, 192, 181);color:black;"
+                    onclick="display.value='Math.tan('">tan</button></center>
+            </td>
+        </tr>
+          
+            
+         <tr>
+             <br>
+            <td colspan="6" style="color: white;opacity: 0.8;font-family: 'Pangolin', cursive;"><center>BY:-DEVESH SINGH</center></td>
+        </tr>
+      </table></div></center>
+      <script>
+        function backspace(calc) {                                             
+            len = display.value.length;
+            display.value = display.value.substring(0, len-1);
+        }
+          
+        function calculate(calc) {
+            if(display.value.includes("!")) {
+                  
+                len = display.value.length;
+                n = Number(display.value.substring(0, len-1));
+                a = 1;
+                  
+                for(i = 2; i <= n; i++)
+                    a = a*i;
+                display.value = a;
+            }
+  
+            else
+                display.value = eval(display.value);
+        }
+        function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+     </script>
+   </body>
+</html>  
